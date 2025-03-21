@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/world-system/static/css/main.4b14d004.css",
+    "main.js": "/world-system/static/js/main.eb36d46f.js",
+    "static/js/453.47b64d15.chunk.js": "/world-system/static/js/453.47b64d15.chunk.js",
+    "static/media/tech-bg.jpg": "/world-system/static/media/tech-bg.a6297805f40d7f7b6f99.jpg",
+    "static/media/people-working.svg": "/world-system/static/media/people-working.3d1625d98742301e5602d3805225a227.svg",
+    "index.html": "/world-system/index.html",
+    "main.4b14d004.css.map": "/world-system/static/css/main.4b14d004.css.map",
+    "main.eb36d46f.js.map": "/world-system/static/js/main.eb36d46f.js.map",
+    "453.47b64d15.chunk.js.map": "/world-system/static/js/453.47b64d15.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b14d004.css",
+    "static/js/main.eb36d46f.js"
+  ]
+}

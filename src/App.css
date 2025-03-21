@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.App {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Cor de fundo do site */
+body {
+  background-color: #00102e;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: rgba(0, 16, 46, 0.9);
+  position: fixed;
+  top: 0;
+  width: 90%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-icon {
+  height: 30px;
+  width: auto;
+}
+
+/* Menu */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+}
+
+.nav-menu button:hover {
+  color: #00b4d8;
+  transform: translateY(-2px);
+}
+
+/* Seções */
+.page-section {
+  min-height: 100vh;
+  padding: 100px 5% 0;
+  scroll-margin-top: 80px;
+}
+
+.page-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.empresa-content {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.empresa-text {
+  flex: 1;
+  text-align: left;
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.empresa-image {
+  flex: 1;
+  max-width: 600px;
+}
+
+.vector-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .empresa-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .empresa-text {
+    order: 2;
+    text-align: center;
+  }
+  
+  .empresa-image {
+    order: 1;
+    max-width: 105%;
+    background-color: #00102e;
+  }
+}
+
+.parag1 {
+  font-size: 1.1rem;
+  margin-bottom: -0.5rem;
+}
+
+.parag2 {
+  font-size: 1.1rem;
+  margin-bottom: -0.5rem;
+}
+
+.parag3 {
+  font-size: 1.1rem;
+  margin-bottom: -0.5rem;
+}
+
+/* Responsividade do Header */
+@media (max-width: 768px) {
+  .main-header {
+    padding: 1rem 5%;
+    width: 90%;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0;
+  }
+
+  .hamburger-line {
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: all 0.3s;
+  }
+
+  .hamburger-line.open:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .hamburger-line.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    background: rgba(0, 16, 46, 0.98);
+    flex-direction: column;
+    padding: 80px 20px 20px;
+    transition: right 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu button {
+    width: 100%;
+    padding: 1.5rem 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-menu button:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mantenha todas as regras existentes e adicione: */
+  
+  .main-header.scrolled .nav-menu {
+    background: rgba(255, 255, 255, 0.98); /* Fundo branco igual ao header */
+    backdrop-filter: blur(10px);
+  }
+
+  .main-header.scrolled .nav-menu button {
+    color: #00102e !important; /* Cor do texto escuro */
+    border-bottom: 1px solid rgba(0, 16, 46, 0.1);
+  }
+
+  .main-header.scrolled .nav-menu button:hover {
+    color: #0066cc !important;
+    background: rgba(0, 16, 46, 0.05);
+  }
+
+  .main-header.scrolled .hamburger-line {
+    background: #00102e; /* Cor do ícone hamburguer */
+  }
+}
+
+/* Efeito de scroll no header */
+.main-header.scrolled {
+  background: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+  color: #00102e;
+}
+
+.main-header.scrolled .logo {
+  color: #00102e;
+}
+
+.main-header.scrolled .nav-menu button {
+  color: #00102e;
+}
+
+.main-header.scrolled .nav-menu button:hover {
+  color: #0066cc;
+}
+
+.main-header.scrolled .hamburger-line {
+  background: #00102e;
+}
+
+.main-header.scrolled .logo-icon {
+  filter: invert(0.9);
+}
+
+/* Transição suave */
+.main-header {
+  transition: all 0.3s ease;
+}
+
+/* Hero Container */
+.hero-container {
+  position: relative;
+  height: 100vh;
+  margin-top: 80px; /* Ajuste para o header fixo */
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, #00102e 0%, transparent 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 5%;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  line-height: 1.2;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-image::after {
+    height: 70%;
+    background: linear-gradient(to top, #00102e 0%, transparent 90%);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+/* Ajuste do header e hero */
+.main-header {
+  background-color: transparent !important;
+  backdrop-filter: none;
+}
+
+.hero-container {
+  position: relative;
+  height: 100vh;
+  margin-top: 0; /* Remove a margem anterior */
+}
+
+.hero-image {
+  z-index: 0; /* Coloca atrás do header */
+}
+
+.main-header {
+  z-index: 1000; /* Mantém o header acima */
+}
+
+/* Link do logo */
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.3s;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+/* Ajuste de cor quando scrolled */
+.main-header.scrolled .logo-link {
+  color: #00102e;
+}
+
+.hero-container {
+  margin-top: -80px; /* Compensa a altura do header */
+  padding-top: 80px; /* Mantém o conteúdo visível */
+}
+
+.hero-content {
+  padding-top: 80px; /* Ajuste para centralização correta */
+}
